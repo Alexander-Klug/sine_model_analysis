@@ -33,7 +33,7 @@ This repository contains the code and analysis for predicting a sine function us
 ### Trainable Weights in a Neural Network
 
 The number of trainable weights in a neural network is determined by the connections between the layers. For a simple feedforward neural network with a single hidden layer:
-- **Input to Hidden Layer Weights:** \( \text{Number of weights} = \text{(Number of input nodes)} \times \text{(Number of hidden nodes)} \).
+- **Input to Hidden Layer Weights:** $\text{Number of weights} = \text{(Number of input nodes)} \times \text{(Number of hidden nodes)} $.
 - **Hidden to Output Layer Weights:** \( \text{Number of weights} = \text{(Number of hidden nodes)} \times \text{(Number of output nodes)} \).
 - **Biases:** Each neuron (except those in the input layer) also has a bias term, adding to the total number of trainable parameters.
 
