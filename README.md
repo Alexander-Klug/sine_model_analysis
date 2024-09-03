@@ -78,11 +78,8 @@ $$n \approx \sqrt{\frac{301}{2 - 1}} = \sqrt{301} \approx 17$$
 As the depth increases, the width $n$ continues to decrease according to this relationship.
 
 
-## Google Colab Notebooks
-- [Sine Function Model Analysis](sine_model_analysis.ipynb): This notebook contains the code for generating data, building and training the model, and evaluating the model's performance.
-
-## Overview
-The first part of the analysis explores how the neural network's performance changes as a function of depth and width, while keeping the total number of trainable parameters roughly constant.
+## Google Colab Notebook
+The first part explores how the neural network's performance changes as a function of depth and width, while keeping the total number of trainable parameters roughly constant.
 
 The second part of the analysis demonstrates how the model's predictions evolve during training using a GIF that visualizes the model's predictions over time.
 
