@@ -1,6 +1,6 @@
 # Sine Model Analysis
 
-This repository contains the code and analysis for predicting a sine function using a neural network. The experiments focus on understanding the effect of neural network depth and width on model performance, especially when the total number of trainable parameters is kept constant.
+This repository contains the code and analysis for predicting a sine function using a neural network. The experiments focus on understanding the effect of neural network depth and width on model performance, when the total number of trainable parameters is kept approximately constant. The experiments further explores the performance of the neural network both within the training range and outside of it.
 
 ## Google Colab Notebooks
 - [Sine Function Model Analysis](sine_model_analysis.ipynb): This notebook contains the code for generating data, building and training the model, and evaluating the model's performance.
