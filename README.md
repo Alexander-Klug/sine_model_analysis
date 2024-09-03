@@ -83,4 +83,4 @@ The first part explores how the neural network's performance changes as a functi
 
 The second part of the analysis demonstrates how the model's predictions evolve during training using a GIF that visualizes the model's predictions over time.
 
-![Training Progress](training_progress_5_8.gif)
+![Training Progress](training_progress_8_6.gif)
