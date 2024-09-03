@@ -77,11 +77,6 @@ $$n \approx \sqrt{\frac{301}{2 - 1}} = \sqrt{301} \approx 17$$
 
 As the depth increases, the width $n$ continues to decrease according to this relationship.
 
-### Implications for Neural Network Design
-- **Deeper Networks:** While deeper networks can capture more complex features, their layers need to be narrower to keep the total number of trainable parameters constant.
-- **Wider Networks:** Shallower networks can have wider layers, but beyond a certain point, the increase in width yields diminishing returns on performance, especially when the number of parameters is fixed.
-
-
 
 ## Google Colab Notebooks
 - [Sine Function Model Analysis](sine_model_analysis.ipynb): This notebook contains the code for generating data, building and training the model, and evaluating the model's performance.
