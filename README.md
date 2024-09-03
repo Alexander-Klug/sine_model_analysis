@@ -59,11 +59,6 @@ $$
 P = 3n + 1
 $$
 
-Where:
-- $n$ is the number of neurons in the hidden layer.
-
-For example, if $n = 100$ neurons:
-- The total number of trainable parameters is $301$.
 
 ### Scaling the Width as a Function of Depth
 
