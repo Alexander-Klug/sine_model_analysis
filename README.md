@@ -54,14 +54,14 @@ When adding more layers (increasing depth):
 - The width of each layer must decrease to maintain the same total number of parameters.
 - The width $n$ for a network with depth $d$ (number of hidden layers) can be approximated as:
 
-\[ n \approx \sqrt{\frac{\text{total parameters}}{(d - 1)}} \]
+$$n \approx \sqrt{\frac{\text{total parameters}}{(d - 1)}}$$
 
 For example, if we increase the depth from 1 to 2 layers while keeping the total parameters constant at 301:
 - The width for 2 hidden layers would be:
 
-\[ n \approx \sqrt{\frac{301}{2 - 1}} = \sqrt{301} \approx 17 \]
+$$n \approx \sqrt{\frac{301}{2 - 1}} = \sqrt{301} \approx 17$$
 
-As the depth increases, the width \( n \) continues to decrease according to this relationship.
+As the depth increases, the width $n$ continues to decrease according to this relationship.
 
 ### Implications for Neural Network Design
 - **Deeper Networks:** While deeper networks can capture more complex features, their layers need to be narrower to keep the total number of trainable parameters constant.
