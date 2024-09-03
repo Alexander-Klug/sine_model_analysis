@@ -10,7 +10,4 @@ The first part of the analysis explores how the neural network's performance cha
 
 The second part of the analysis demonstrates how the model's predictions evolve during training using a GIF that visualizes the model's predictions over time.
 
-## Instructions
-1. Clone the repository to your local machine:
-   ```bash
-   git clone https://github.com/YOUR_USERNAME/sine_model_analysis.git
+![Training Progress](training_progress_5_8.gif)
