@@ -32,19 +32,38 @@ This repository contains the code and analysis for predicting a sine function us
 
 ### Trainable Weights in a Neural Network
 
-The number of trainable weights in a neural network is determined by the connections between the layers. For a simple feedforward neural network with a single hidden layer:
-- **Input to Hidden Layer Weights:** $\text{Number of weights} = \text{(Number of input nodes)} \times \text{(Number of hidden nodes)}$.
-- **Hidden to Output Layer Weights:** $\text{Number of weights} = \text{(Number of hidden nodes)} \times \text{(Number of output nodes)}$.
-- **Biases:** Each neuron (except those in the input layer) also has a bias term, adding to the total number of trainable parameters.
+The number of trainable weights in a neural network depends on the architecture's width (number of neurons per layer) and depth (number of hidden layers).
 
-For example, if the network has 1 input node, 100 hidden nodes, and 1 output node, the total number of trainable parameters (weights + biases) can be calculated as follows:
+For a neural network with:
+- **Depth $d$**: Number of hidden layers.
+- **Width $n$**: Number of neurons in each hidden layer.
 
-1. **Input to Hidden Layer:** $1 \times 100 = 100$ weights.
-2. **Biases in Hidden Layer:** $100$ biases.
-3. **Hidden to Output Layer:** $100 \times 1 = 100$ weights.
-4. **Bias in Output Layer:** $1$ bias.
+The total number of trainable parameters $P$ (including weights and biases) is given by:
 
-Thus, the total number of trainable parameters is $100 + 100 + 100 + 1 = 301$.
+$$
+P = (d-1) \times n^2 + (d+2) \times n + 1
+$$
+
+This formula accounts for:
+1. **Weights between the Input Layer and the First Hidden Layer**: $1 \times n$.
+2. **Weights between Hidden Layers**: $(d-1) \times (n \times n)$.
+3. **Weights between the Last Hidden Layer and the Output Layer**: $n \times 1$.
+4. **Biases**: Each hidden layer contributes $n$ biases, and the output layer contributes 1 bias.
+
+### Case for a Single Hidden Layer ($d = 1$)
+
+When the network has a single hidden layer ($d = 1$):
+- The total number of trainable parameters simplifies to:
+
+$$
+P = 3n + 1
+$$
+
+Where:
+- $n$ is the number of neurons in the hidden layer.
+
+For example, if $n = 100$ neurons:
+- The total number of trainable parameters is $301$.
 
 ### Scaling the Width as a Function of Depth
 
@@ -66,6 +85,7 @@ As the depth increases, the width $n$ continues to decrease according to this re
 ### Implications for Neural Network Design
 - **Deeper Networks:** While deeper networks can capture more complex features, their layers need to be narrower to keep the total number of trainable parameters constant.
 - **Wider Networks:** Shallower networks can have wider layers, but beyond a certain point, the increase in width yields diminishing returns on performance, especially when the number of parameters is fixed.
+
 
 
 ## Google Colab Notebooks
