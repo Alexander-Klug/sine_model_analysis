@@ -1,6 +1,6 @@
 # Sine Model Analysis
 
-This repository contains the code and analysis for predicting a sine function using a neural network. The experiments focus on understanding the effect of neural network depth and width on model performance, when the total number of trainable parameters is kept approximately constant. The experiments further explores the performance of the neural network both within the training range and outside of it.
+This repository contains the code and analysis for predicting a sine function using a simple neural network. The experiments focus on understanding the effect of neural network depth and width on model performance, when the total number of trainable parameters is kept approximately constant. The experiments further explores the performance of the neural network both within the training range and outside of it.
 
 ## Objective
 - **Within the Training Range:** Where the NN is trained with data sampled from a specific range (e.g., [-10, 10]).
