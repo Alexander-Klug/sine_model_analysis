@@ -62,7 +62,7 @@ $$
 
 ### Scaling the Width as a Function of Depth
 
-To keep the total number of trainable parameters roughly constant while increasing the depth of the network, the width of each layer needs to be adjusted. If we start with 1 hidden layer of 100 neurons, the total number of parameters is approximately 301.
+To keep the total number of trainable parameters roughly constant while increasing the depth of the network, the width of each layer needs to be adjusted. If we start with 1 hidden layer of 100 neurons, the total number of parameters is 301.
 
 When adding more layers (increasing depth):
 - The width of each layer must decrease to maintain the same total number of parameters.
