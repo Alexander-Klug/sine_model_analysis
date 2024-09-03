@@ -10,7 +10,7 @@ This repository contains the code and analysis for predicting a sine function us
 
 1. **Data Generation**:
    - We generate a dataset of `num_samples` random values from a uniform distribution within a specified `test_range` (e.g., [-10, 10]).
-   - The target values are computed as \( y = \sin(b) \).
+   - The target values are computed as \(y = \sin(b)\).
 
 2. **Model Configuration**:
    - We explore different depths (number of layers) and widths (number of neurons per layer) of the NN. The total number of trainable parameters is kept roughly constant across these configurations to ensure a fair comparison.
