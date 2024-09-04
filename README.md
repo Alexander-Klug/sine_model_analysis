@@ -118,7 +118,7 @@ This analysis shows that **deeper networks** perform better when approximating a
 
 In summary, the experiments clearly demonstrate that **increasing depth improves performance** on both in-range and out-of-range data, providing more efficient and effective function approximation with a fixed number of parameters.
 
-![Result](result.png)
+![Result](result2.png)
 
 
 ## Google Colab Notebook
