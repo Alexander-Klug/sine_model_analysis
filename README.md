@@ -2,9 +2,31 @@
 
 This repository contains the code and analysis for predicting a sine function using a simple neural network. The experiments focus on understanding the effect of neural network depth and width on model performance, when the total number of trainable parameters is kept approximately constant. The experiments further explores the performance of the neural network both within the training range and outside of it.
 
-## Objective
-- **Within the Training Range:** Where the NN is trained with data sampled from a specific range (e.g., [-10, 10]).
-- **Outside the Training Range:** Where the NN is tested on extrapolated data outside this range (e.g., [-15, -10) ∪ (10, 15]).
+## Background: Neural Networks and Function Approximation
+
+Neural networks are powerful tools for approximating complex functions. One of the fundamental questions in neural network theory is how well these models can approximate known functions, such as the sine function. This question is closely related to the **Universal Approximation Theorem**, which has profound implications for understanding the potential of neural networks.
+
+### Universal Approximation Theorem
+
+The **Universal Approximation Theorem** states that a feedforward neural network with just **one hidden layer** (also known as a **shallow** network) can approximate any **continuous function** on a closed interval to arbitrary precision, provided it has enough neurons in the hidden layer. This means that, in theory, even a simple neural network can represent very complex functions.
+
+However, there are important caveats to this result:
+- **Number of Neurons**: The theorem does not specify how many neurons are required to achieve a given level of precision. In practice, the number of neurons needed to approximate a complex function like sine may be very large.
+- **Training with Backpropagation**: While the theorem guarantees the *existence* of a neural network that can approximate a function, it does not ensure that gradient-based methods such as **backpropagation** will successfully find this approximation during training. This is because the training process is subject to issues like local minima, vanishing gradients, and overfitting, which can affect the model's ability to learn the optimal approximation.
+- **Trade-offs between Depth and Width**: Although a shallow network can approximate any continuous function, deeper networks (with more hidden layers) can often achieve the same approximation with fewer neurons per layer. In recent years, **deep networks** have become more popular because they tend to generalize better and are more efficient in practice.
+
+### Implications for Function Approximation
+
+In this project, we explore how neural networks can approximate the sine function, which is a fundamental and continuous function. We investigate the following:
+- How well a neural network with different depths and widths can approximate the sine function both **within** and **outside** the training range.
+- The effect of keeping the **total number of trainable parameters constant** while varying the depth and width. This helps us understand how neural networks balance complexity and capacity when approximating functions.
+
+Although the Universal Approximation Theorem suggests that a shallow network could approximate the sine function given enough neurons, in practice:
+- **Deep networks** (with more hidden layers) may provide better generalization and faster convergence when using gradient-based training methods like backpropagation.
+- **Shallow networks** may require an impractically large number of neurons to approximate the sine function with high precision.
+
+In this analysis, we aim to observe these trade-offs and gain insight into the practical challenges of function approximation using neural networks.
+
 
 ## Key Steps
 
@@ -18,7 +40,7 @@ This repository contains the code and analysis for predicting a sine function us
 
 3. **Training and Evaluation**:
    - For each depth, the NN is trained multiple times (defined by `runtimes`) to account for variability in the training process.
-   - The performance is evaluated using Mean Squared Error (MSE) both on the test set within the training range and on the test set outside the training range.
+   - The performance is evaluated using Mean Squared Error (MSE) both on the test set within the training range (e.g., [-10, 10]) and on the test set outside the training range (e.g., [-15, -10) ∪ (10, 15]).
 
 4. **Averaging Results**:
    - The MSE results for each depth are averaged across all runs to obtain a more stable estimate of the network’s performance.
