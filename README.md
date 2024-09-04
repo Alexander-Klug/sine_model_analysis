@@ -100,6 +100,26 @@ $$n \approx \sqrt{\frac{301}{2 - 1}} = \sqrt{301} \approx 17$$
 As the depth increases, the width $n$ continues to decrease according to this relationship.
 
 
+## Conclusion
+
+This analysis shows that **deeper networks** perform better when approximating a simple function like the sine wave, even when the **total number of trainable parameters is kept constant**. The key insights are:
+
+1. **Deeper Networks Capture Complexity Better**:
+   - Networks with 5-6 layers achieve the best performance within the training range. Although shallow networks can approximate continuous functions, they struggle to efficiently capture the complexities of the sine function without using a large number of neurons. Depth enables the network to distribute learning tasks across layers, allowing for more nuanced function approximation.
+
+2. **Extrapolation Benefits of Deeper Networks**:
+   - Deeper networks also perform better when extrapolating outside the training range. The ability to generalize to unseen data demonstrates the strength of deeper architectures in capturing the underlying periodicity of the sine function, which is harder for shallow networks to achieve.
+
+3. **Same Number of Weights, Different Results**:
+   - While shallow networks require more neurons in a single layer to achieve similar results, deeper networks can use fewer neurons per layer and still outperform shallower architectures, both within and outside the training range. This illustrates how depth allows neural networks to build **hierarchical features**, which are more effective for capturing complex patterns like sine waves.
+
+4. **Theoretical Insights in Practice**:
+   - Although the **Universal Approximation Theorem** suggests that shallow networks can approximate any continuous function, the theorem does not guarantee that a shallow network will do so efficiently in practice. Deeper networks prove more efficient at approximating complex functions like sine with fewer neurons, leading to better overall generalization.
+
+In summary, the experiments clearly demonstrate that **increasing depth improves performance** on both in-range and out-of-range data, providing more efficient and effective function approximation with a fixed number of parameters.
+
+
+
 ## Google Colab Notebook
 The first part explores how the neural network's performance changes as a function of depth and width, while keeping the total number of trainable parameters roughly constant.
 
